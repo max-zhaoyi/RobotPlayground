@@ -1,5 +1,5 @@
 class integerLib:
-    ROBOT_LIBRARY_SCOPE = 'SUITE'
+    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
 
     def __init__(self) -> None:
         self.integer_value = 0

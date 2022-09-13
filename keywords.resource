@@ -28,3 +28,13 @@ Verify Python Variable Access
     ${tmp}=    Global Read Arg
     Log To Console    ${tmp}
     Should Be Equal As Strings    ${strArg}    ${tmp}
+
+Verify Teardown Was Successful
+    ${tmp}=    Global Read Teardown Arg
+    Should Be Equal As Strings    ${tmp}    after teardown
+
+Change Teardown Variable
+    Execute Teardown
+    Log To Console    Tearing Down!
+
+    

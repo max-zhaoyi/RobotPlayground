@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Playground test suite to get started with the Robot Framework
-...
-...
+Test Teardown    Change Teardown Variable
+
 Resource    keywords.resource
 Default Tags    positive
 
@@ -24,3 +24,6 @@ Try Passing Command Line Argument
     [Tags]    cli
     Log To Console    ${consoleArgument}
     Should Not Be Equal As Strings    ${consoleArgument}    World
+
+Check Teardown Worked
+    Verify Teardown Was Successful
