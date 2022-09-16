@@ -19,8 +19,7 @@ Verify String
 
 Verify Custom Arguments Passed in Python Function
     [Arguments]    ${numArg}    ${strArg}
-    ${tmp}=    Custom Validate Args    ${numArg}    ${strArg}
-    Should Be True  ${tmp}  
+    Custom Validate Args    ${numArg}    ${strArg}
 
 Verify Python Variable Access
     [Arguments]    ${strArg}
@@ -36,5 +35,8 @@ Verify Teardown Was Successful
 Change Teardown Variable
     Execute Teardown
     Log To Console    Tearing Down!
+
+Verify Python Exceptions Can Be Expected
+    Run Keyword And Expect Error    *    Verify Arg Value   Hello
 
     

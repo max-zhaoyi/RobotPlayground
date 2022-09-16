@@ -27,3 +27,6 @@ Try Passing Command Line Argument
 
 Check Teardown Worked
     Verify Teardown Was Successful
+
+Try Expecting Python Exception
+    Verify Python Exceptions Can Be Expected

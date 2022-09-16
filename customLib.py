@@ -1,3 +1,6 @@
+import unittest
+
+
 class customLib:
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
 
@@ -6,8 +9,9 @@ class customLib:
         self.global_teardown_arg = "before teardown"
 
     def custom_validate_args(self, numArg, strArg):
-        tmp = int(numArg) == 0 and strArg == "Hello World"
-        return tmp
+        tc = unittest.TestCase()
+        tc.assertEqual(int(numArg), 0)
+        tc.assertEqual(strArg, "Hello World")
 
     def global_store_arg(self, strArg):
         self.global_arg = strArg
@@ -20,3 +24,8 @@ class customLib:
 
     def global_read_teardown_arg(self):
         return self.global_teardown_arg
+
+    def verify_arg_value(self, strArg):
+        tc = unittest.TestCase()
+        tc.assertEqual(strArg, "flksdjfwoef")
+        # This function will throw exception
