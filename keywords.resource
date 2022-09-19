@@ -39,4 +39,17 @@ Change Teardown Variable
 Verify Python Exceptions Can Be Expected
     Run Keyword And Expect Error    *    Verify Arg Value   Hello
 
+Change Setup Variable
+    Execute Setup
+    Log To Console    Setting up!
+
+Verify Suite Setup Variable
+    ${tmp}=    Global Read Setup Arg
+    Should Be Equal As Strings    ${tmp}    after setup
+Test Level Setup
+    Execute Setup Test
+
+Verify Test Setup Variable
+    ${tmp}=    Global Read Setup Arg
+    Should Be Equal As Strings    ${tmp}    after test setup
     

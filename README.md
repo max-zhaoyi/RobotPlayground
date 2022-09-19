@@ -1,6 +1,6 @@
 # RobotPlayground
 
-## CLI Commands for running this test set
+## CLI Commands for running this test set (tried on MacOS zsh with Python3)
 
 ### Run all tests in directory
 

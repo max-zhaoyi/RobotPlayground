@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation    Playground test suite to get started with the Robot Framework
+Suite Setup    Change Setup Variable
 Test Teardown    Change Teardown Variable
 
 Resource    keywords.resource
@@ -31,3 +32,10 @@ Check Teardown Worked
 Try Expecting Python Exception
     [Tags]    negative
     Verify Python Exceptions Can Be Expected
+
+Checking if Suite Setup Was Executed
+    Verify Suite Setup Variable
+
+Try Overriding Suite Setup with Test Setup
+    [Setup]    Test Level Setup
+    Verify Test Setup Variable

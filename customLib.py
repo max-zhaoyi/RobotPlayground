@@ -7,6 +7,7 @@ class customLib:
     def __init__(self) -> None:
         self.global_arg = ""
         self.global_teardown_arg = "before teardown"
+        self.global_setup_arg = "before setup"
 
     def custom_validate_args(self, numArg, strArg):
         tc = unittest.TestCase()
@@ -29,3 +30,12 @@ class customLib:
         tc = unittest.TestCase()
         tc.assertEqual(strArg, "flksdjfwoef")
         # This function will throw exception
+
+    def execute_setup(self):
+        self.global_setup_arg = "after setup"
+
+    def global_read_setup_arg(self):
+        return self.global_setup_arg
+
+    def execute_setup_test(self):
+        self.global_setup_arg = "after test setup"
