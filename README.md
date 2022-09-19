@@ -1,7 +1,7 @@
 # RobotPlayground
 
 ## CLI Commands for running this test set
----
+
 ### Run all tests in directory
 
 `python3 -m robot --variable consoleArgument:hello .`
